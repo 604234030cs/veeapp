@@ -8,6 +8,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { FlashlightPage } from '../pages/flashlight/flashlight';
+import { JsonPage } from '../pages/json/json';
 
 @Component({
   templateUrl: 'app.html'
@@ -28,7 +29,9 @@ export class MyApp {
       { title: 'List', component: ListPage, icon: 'list'  },
       { title: 'Login', component: LoginPage, icon: 'walk' },
       { title: 'scanner', component: ScannerPage, icon: 'barcode' },
-      { title: 'Flashlight', component: FlashlightPage, icon: 'send' }
+      { title: 'Flashlight', component: FlashlightPage, icon: 'send' },
+      { title: 'JsonMenu', component: JsonPage, icon: 'hand' },
+      
     
     ];
 
