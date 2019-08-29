@@ -11,5 +11,23 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-item >
+      <ion-label floating >ชื่อ:</ion-label>
+      <ion-input type="text" [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>นามสกุล:</ion-label>
+    <ion-input type="text" [(ngModel)]="surname"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>อีเมล:</ion-label>
+    <ion-input type="text" [(ngModel)]="email" ></ion-input>
+  </ion-item>
+  <button ion-button block >
+    <ion-icon name="body" block (click)="postJsonData(name,surname,email)"></ion-icon> &nbsp; ลงทะเบียน
+    
+  </button>
+  {{returnMsg}}
+  
 
 </ion-content>

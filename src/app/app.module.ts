@@ -1,3 +1,4 @@
+import {HttpClientModule} from '@angular/common/http';
 
 import { JsonPage } from './../pages/json/json';
 import { FlashlightPage } from './../pages/flashlight/flashlight';
@@ -31,7 +32,9 @@ import { Flashlight } from '@ionic-native/flashlight';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
