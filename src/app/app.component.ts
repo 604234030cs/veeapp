@@ -9,6 +9,9 @@ import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { FlashlightPage } from '../pages/flashlight/flashlight';
 import { JsonPage } from '../pages/json/json';
+import { MovieAppPage } from '../pages/movie-app/movie-app';
+
+
 
 @Component({
   templateUrl: 'app.html'
@@ -31,7 +34,7 @@ export class MyApp {
       { title: 'scanner', component: ScannerPage, icon: 'barcode' },
       { title: 'Flashlight', component: FlashlightPage, icon: 'send' },
       { title: 'JsonMenu', component: JsonPage, icon: 'hand' },
-      
+      { title: 'MovieApp', component: MovieAppPage, icon: 'hand' }
     
     ];
 

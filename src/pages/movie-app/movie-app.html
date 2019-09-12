@@ -1,0 +1,63 @@
+<!--
+  Generated template for the MovieAppPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-item >
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title tex center>MovieApp </ion-title>
+    </ion-navbar>
+  </ion-item>
+  </ion-header>
+<ion-content padding>
+    <ion-card color = dark>
+        <ion-card-header>
+          All About Movie
+        </ion-card-header>
+        <ion-card-content>
+        </ion-card-content>
+      </ion-card>
+            <ion-item block (click)="NowPlaying()">
+                <ion-thumbnail item-left>
+                    <img src="assets/imgs/Now.jpg">
+                </ion-thumbnail>
+                <h2>Now</h2>
+                <p>Now playing</p>
+                <ion-icon item-right name="arrow-dropright-circle"></ion-icon>
+            </ion-item>
+            <ion-item block (click)="Upcoming()">
+                  <ion-thumbnail item-left>
+                    <img src="assets/imgs/Upcoming.jpg">
+                  </ion-thumbnail>
+                  <h2>Upcoming</h2>
+                  <p>Upcoming Movie</p>
+                  <ion-icon item-right name="arrow-dropright-circle"></ion-icon>
+            </ion-item>
+            <ion-item block (click)="Popular()">
+                  <ion-thumbnail item-left>
+                    <img src="assets/imgs/Popular.jpg">
+                  </ion-thumbnail>
+                  <h2>Popular</h2>
+                  <p>Popular Movie</p>
+                  <ion-icon item-right name="arrow-dropright-circle"></ion-icon>
+                </ion-item>
+                <ion-item block (click)="TopRated()">
+                    <ion-thumbnail item-left>
+                      <img src="assets/imgs/TopRated.jpg">
+                    </ion-thumbnail>
+                    <h2>Top Rated</h2>
+                    <p>Top Rated Movie</p>
+                    <ion-icon item-right name="arrow-dropright-circle"></ion-icon>
+                  </ion-item>
+                  
+        
+      
+      
+
+
+</ion-content>\\end class
