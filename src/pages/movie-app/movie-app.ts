@@ -22,9 +22,17 @@ export class MovieAppPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad MovieAppPage');
   }
-  NowPlaying(){};
-  Upcoming(){};
-  Popular(){};
-  TopRated(){};
+  NowPlaying(){
+    this.navCtrl.push("NowPlayingPage");
+  }
+  Upcoming(){
+    this.navCtrl.push("UpComingPage");
+  }
+  Popular(){
+    this.navCtrl.push("PopularPage");
+  }
+  TopRated(){
+    this.navCtrl.push("TopRatedPage");
+  }
 
 }
