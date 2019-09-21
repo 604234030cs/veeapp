@@ -6,10 +6,24 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>TopRated</ion-title>
+    <ion-title text-center>TopRated</ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="movieapp()" >
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <ion-item *ngFor="let toprated of movieArray"
+  (click)="Moviedetail(toprated)">
+    <div item-left>
+      <img src="{{imgPath + toprated.poster_path}}" style="display: block; width: 90px; height: 120px;" >
+    </div>
+    <h2>toprated.title</h2>
+    <p>Release:{{toprated.release_date}}</p>
+
+  </ion-item>
 
 </ion-content>

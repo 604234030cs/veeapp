@@ -15,18 +15,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'moviedetail.html',
 })
 export class MoviedetailPage {
-  
+
   detail: any = [];
   imgPath = 'https://image.tmdb.org/t/p/original/';
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public moviedetail: MovieProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public moviedetail: MovieProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MoviedetailPage');
     this.detail = this.navParams.data;
     console.log(this.detail);
-    
   };
 
 

@@ -1,5 +1,7 @@
+import { MovieProvider } from './../../providers/movie/movie';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MovieAppPage } from '../movie-app/movie-app';
 
 /**
  * Generated class for the TopRatedPage page.
@@ -15,11 +17,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TopRatedPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  movieArray: any [];
+  imgPath = 'https://image.tmdb.org/t/p/original/';
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,public toprated: MovieProvider) {
+    this.loadtoprateddata();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TopRatedPage');
   }
 
+  loadtoprateddata(){
+    this.toprated.getToprated().subscribe(toprateds =>{
+      this.movieArray=toprateds['results'];
+    });
+  }
+  movieapp(){
+    this.navCtrl.push(MovieAppPage);
+  }
+  Moviedetail(toprated){
+    this.navCtrl.push("MoviedetailPage",toprated);
+  }
 }

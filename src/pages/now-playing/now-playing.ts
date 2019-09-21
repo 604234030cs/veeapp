@@ -3,6 +3,7 @@ import { MovieAppPage } from './../movie-app/movie-app';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+
 /**
  * Generated class for the NowPlayingPage page.
  *

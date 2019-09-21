@@ -25,4 +25,12 @@ export class MovieProvider {
     const url = this.baseURL + 'movie/upcoming?' + this.apiKey;
     return this.http.get(url);
   }
+  getPopular(){
+    const url = this.baseURL + 'movie/popular?' + this.apiKey;
+    return this.http.get(url);
+  }
+  getToprated(){
+    const url = this.baseURL +'movie/top_rated?' + this.apiKey;
+    return this.http.get(url);
+  }
 }
