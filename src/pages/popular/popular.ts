@@ -2,6 +2,7 @@ import { MovieProvider } from './../../providers/movie/movie';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MovieAppPage } from '../movie-app/movie-app';
+import { MoviedetailPage } from '../moviedetail/moviedetail';
 
 /**
  * Generated class for the PopularPage page.
@@ -28,7 +29,7 @@ export class PopularPage {
   }
 
   loadpopulardata(){
-    this.popular.getNowMovie().subscribe(populars =>{
+    this.popular.getPopular().subscribe(populars =>{
       this.moviesArray=populars['results'];
     });
   }
@@ -38,6 +39,17 @@ export class PopularPage {
   Moviedetail(popular){
     this.navCtrl.push("MoviedetailPage",popular);
   }
-    
+  onEvent(ev: any) {
+    let val = ev.target.value;
+    if (val.length !== 0) {
+      this.popular.searchMovie(val).subscribe(nowmovies => {
+        this.moviesArray = nowmovies['results'];
+        
+      });
+    } else {
+      this. loadpopulardata();
+    }
+  }
+  
 
 }

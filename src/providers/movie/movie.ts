@@ -12,6 +12,8 @@ export class MovieProvider {
   
   public baseURL = 'https://api.themoviedb.org/3/';
   public apiKey = 'api_key=875eb98a7563ed49b4199a4d60015b5e';
+  
+  
 
   constructor(public http: HttpClient) {
     console.log('Hello MovieProvider Provider');
@@ -33,4 +35,18 @@ export class MovieProvider {
     const url = this.baseURL +'movie/top_rated?' + this.apiKey;
     return this.http.get(url);
   }
+  searchMovie(query) {
+    const url = this.baseURL + 'search/movie?query=' + query + '&' + this.apiKey;
+    return this.http.get(url);
+  }
+  getMovieDetails(movieID){
+    const url = this.baseURL + 'movie/' + movieID + '?' + this.apiKey + '&language=en-US';
+    return this.http.get(url);
+  }
+  getVideos(movieID){
+    const url = this.baseURL + 'movie/' + movieID + '/videos?' + this.apiKey + '&language=en-US';
+    return this.http.get(url);
+  }
+  
+  
 }

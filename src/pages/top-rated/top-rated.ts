@@ -17,10 +17,10 @@ import { MovieAppPage } from '../movie-app/movie-app';
 })
 export class TopRatedPage {
 
-  movieArray: any [];
+  movieArray: any[];
   imgPath = 'https://image.tmdb.org/t/p/original/';
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public toprated: MovieProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toprated: MovieProvider) {
     this.loadtoprateddata();
   }
 
@@ -28,15 +28,30 @@ export class TopRatedPage {
     console.log('ionViewDidLoad TopRatedPage');
   }
 
-  loadtoprateddata(){
-    this.toprated.getToprated().subscribe(toprateds =>{
-      this.movieArray=toprateds['results'];
+  loadtoprateddata() {
+    this.toprated.getToprated().subscribe(toprateds => {
+      this.movieArray = toprateds['results'];
     });
   }
-  movieapp(){
+  movieapp() {
     this.navCtrl.push(MovieAppPage);
   }
-  Moviedetail(toprated){
-    this.navCtrl.push("MoviedetailPage",toprated);
+  Moviedetail(toprated) {
+    this.navCtrl.push("MoviedetailPage", toprated);
+  }
+  onEvent(ev: any) {
+    let val = ev.target.value;
+    if (val.length !== 0) {
+      this.toprated.searchMovie(val).subscribe(nowmovies => {
+        this.movieArray = nowmovies['results'];
+        
+      });
+    } else {
+      this. loadtoprateddata();
+    }
   }
 }
+
+
+
+

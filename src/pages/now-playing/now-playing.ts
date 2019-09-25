@@ -39,5 +39,16 @@ export class NowPlayingPage {
   Movieapp(){
     this.navCtrl.push(MovieAppPage);
   }
+  onEvent(ev: any) {
+    let val = ev.target.value;
+    if (val.length !== 0) {
+      this.nowmovie.searchMovie(val).subscribe(nowmovies => {
+        this.moviesArray = nowmovies['results'];
+        
+      });
+    } else {
+      this. loadnowdata();
+    }
+  }
 
 }

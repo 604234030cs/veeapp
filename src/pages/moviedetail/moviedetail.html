@@ -11,17 +11,30 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-item ><ion-avatar item-left>
-      
+  <ion-item>
+    <ion-avatar item-left>
+
+
       <img src="{{imgPath + detail.poster_path}}">
-  </ion-avatar><h2>{{detail.title}}</h2></ion-item>
+    </ion-avatar>
+    <h2>{{detail.title}}</h2>
+  </ion-item>
+  <ion-item>
     
-  <img src="{{imgPath + detail.poster_path}}">
-    <h2>Release Date</h2>
-    <p>{{detail.release_date}}</p>
-    <h2>Vote Average</h2>
-    <p>{{detail.vote_average}}</p>
-    <h2>Overview</h2>
-    <p>{{detail.overview}}</p>
+      <ion-card-header>
+          <img src="{{imgPath + detail.poster_path}}">
+          <button ion-button block icon-lef color="light"  (click)="openVideo(detail.id)" >Video Trailler</button>
+        <button ion-button block icon-lef color="light"  (click)="talk(detail.overview)" >textOrOptions</button>
+      </ion-card-header>
+    </ion-item>   
+          <h2>Release Date</h2>
+          <p>{{detail.release_date}}</p>
+          <h2>Vote Average</h2>
+          <p>{{detail.vote_average}}</p>
+          <h2>Overview</h2>
+           <p>{{detail.overview}}</p>
+      
+    
   
+
 </ion-content>
