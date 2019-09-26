@@ -2,7 +2,7 @@ import { MovieProvider } from './../../providers/movie/movie';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MovieAppPage } from '../movie-app/movie-app';
-import { MoviedetailPage } from '../moviedetail/moviedetail';
+
 
 /**
  * Generated class for the PopularPage page.

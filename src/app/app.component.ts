@@ -13,6 +13,7 @@ import { MovieAppPage } from '../pages/movie-app/movie-app';
 
 
 
+
 @Component({
   templateUrl: 'app.html'
 })

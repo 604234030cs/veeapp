@@ -20,6 +20,10 @@ import { SMS } from '@ionic-native/sms/ngx';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Flashlight } from '@ionic-native/flashlight';
 import { MovieProvider } from '../providers/movie/movie';
+import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+
+
 
 
 
@@ -49,9 +53,9 @@ import { MovieProvider } from '../providers/movie/movie';
   ],
   providers: [
     StatusBar,
-    SplashScreen,SMS,BarcodeScanner,Flashlight,JsonPage,MovieAppPage,
+    SplashScreen,SMS,BarcodeScanner,Flashlight,JsonPage,MovieAppPage,TextToSpeech,SocialSharing ,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    MovieProvider
+    MovieProvider,
   ]
 })
 export class AppModule {}
